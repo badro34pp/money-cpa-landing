@@ -1,15 +1,15 @@
+
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>فرصتك للربح من CPA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Now</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
       color: white;
       text-align: center;
       display: flex;
@@ -17,41 +17,52 @@
       justify-content: center;
       height: 100vh;
     }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
+      font-size: 2.5rem;
     }
     p {
-      font-size: 1.2em;
-      margin-bottom: 1.5em;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
     }
-    a.button {
-      background-color: #ffffff;
-      color: #0072ff;
+    .btn {
       padding: 15px 30px;
+      font-size: 1rem;
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: 0.3s;
     }
-    a.button:hover {
-      background-color: #e0e0e0;
-    }
-    footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      font-size: 0.9em;
-      color: #f0f0f0;
+    .timer {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ddd;
     }
   </style>
 </head>
 <body>
-  <h1>اكسب المال مع عروض CPA!</h1>
-  <p>ابدأ رحلتك في التسويق بالعمولة مع أفضل العروض وأكثرها ربحًا.</p>
-  <a href="#" class="button">ابدأ الآن</a>
-  <footer>
-    &copy; 2025 جميع الحقوق محفوظة.
-  </footer>
+  <div class="container">
+    <h1>Get the App Now!</h1>
+    <p>Click the button below to start your download. Limited time only!</p>
+    <a href="https://your-cpa-link.com" class="btn">Download Now</a>
+    <div class="timer" id="countdown">Offer expires in: 04:59</div>
+  </div>
+
+  <script>
+    let seconds = 299;
+    const timer = document.getElementById("countdown");
+    setInterval(() => {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      timer.textContent = `Offer expires in: ${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      if (seconds > 0) seconds--;
+    }, 1000);
+  </script>
 </body>
 </html>
